@@ -143,7 +143,7 @@ def run_vasp(
 
     if job_type == JobType.NORMAL:
         jobs = [VaspJob(split_vasp_cmd, **vasp_job_kwargs)]
-    ####### Ben 2025/03/12
+    ####### Ben
     elif job_type == JobType.NCL:
         jobs = [VaspJob(split_vasp_ncl_cmd, **vasp_job_kwargs)]
     elif job_type == JobType.DOUBLE_RELAXATION:
