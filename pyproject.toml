@@ -7,7 +7,7 @@ name = "atomate2"
 description = "atomate2 is a library of materials science workflows"
 readme = "README.md"
 keywords = ["automated", "dft", "high-throughput", "vasp", "workflow"]
-license = "BSD-3-Clause-LBNL"
+license = { text = "BSD-3-Clause-LBNL" }
 authors = [{ name = "Alex Ganose", email = "alexganose@gmail.com" }]
 dynamic = ["version"]
 classifiers = [
@@ -132,6 +132,58 @@ homepage = "https://materialsproject.github.io/atomate2/"
 repository = "https://github.com/materialsproject/atomate2"
 documentation = "https://materialsproject.github.io/atomate2/"
 changelog = "https://github.com/materialsproject/atomate2/blob/main/CHANGELOG.md"
+
+[tool.setuptools]
+package-dir = { "atomate2" = "." }
+packages = [
+    "atomate2",
+    "atomate2.abinit",
+    "atomate2.abinit.flows",
+    "atomate2.abinit.jobs",
+    "atomate2.abinit.schemas",
+    "atomate2.abinit.sets",
+    "atomate2.abinit.utils",
+    "atomate2.aims",
+    "atomate2.aims.flows",
+    "atomate2.aims.jobs",
+    "atomate2.aims.schemas",
+    "atomate2.aims.utils",
+    "atomate2.amset",
+    "atomate2.ase",
+    "atomate2.cli",
+    "atomate2.common",
+    "atomate2.common.analysis",
+    "atomate2.common.builders",
+    "atomate2.common.flows",
+    "atomate2.common.jobs",
+    "atomate2.common.schemas",
+    "atomate2.cp2k",
+    "atomate2.cp2k.builders",
+    "atomate2.cp2k.flows",
+    "atomate2.cp2k.jobs",
+    "atomate2.cp2k.schemas",
+    "atomate2.cp2k.schemas.calc_types",
+    "atomate2.cp2k.sets",
+    "atomate2.forcefields",
+    "atomate2.forcefields.flows",
+    "atomate2.lobster",
+    "atomate2.openff",
+    "atomate2.openmm",
+    "atomate2.openmm.flows",
+    "atomate2.openmm.jobs",
+    "atomate2.qchem",
+    "atomate2.qchem.flows",
+    "atomate2.qchem.jobs",
+    "atomate2.qchem.sets",
+    "atomate2.utils",
+    "atomate2.utils.testing",
+    "atomate2.vasp",
+    "atomate2.vasp.builders",
+    "atomate2.vasp.flows",
+    "atomate2.vasp.jobs",
+    "atomate2.vasp.schemas",
+    "atomate2.vasp.sets",
+]
 
 [dependency-groups]
 dev = ["pre-commit>=4.5.1"]
